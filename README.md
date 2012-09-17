@@ -1,7 +1,7 @@
 Paul Revere
 ===========
 
-[![Build Status](https://secure.travis-ci.org/thoughtbot/paul_revere.png?branch=master)](http://travis-ci.org/thoughtbot/paul_revere)
+[![Build Status](https://secure.travis-ci.org/kennym/paul_revere_mongoid.png?branch=master)](http://travis-ci.org/kennym/paul_revere_mongoid)
 
 
 Simple announcement plugin to include "one off" style announcements in Rails web apps.
@@ -11,38 +11,27 @@ Install with the asset pipeline (Rails 3.1+, asset pipeline enabled)
 
 Install as normal in your Gemfile:
 
-    gem 'paul_revere'
-
-Run the generator to create the migration:
-
-    rails generate paul_revere
+    gem 'paul_revere_mongoid', git: "https://github.com/mirthworks/paul_revere_mongoid"
 
 Add the announcement JS to `app/assets/javascripts/application.js`:
 
     //= require announcements
 
-Run the migration:
-
-    rake db:migrate && rake db:migrate:redo
 
 Install without the asset pipeline (Rails 3.0 or asset pipeline disabled)
 ---------------------------------------------------------------------------
 
 Install as normal in your Gemfile:
 
-    gem 'paul_revere'
+    gem 'paul_revere_mongoid', git: "https://github.com/mirthworks/paul_revere_mongoid"
 
-Run the generator to create the migration and copy the JavaScript file into public:
+Run the generator to copy the JavaScript file into public:
 
     rails generate paul_revere
 
 Add the announcement JS to your layout, such as `app/views/layouts/application.html.erb`:
 
     <%= javascript_include_tag 'announcements' %>
-
-Run the migration:
-
-    rake db:migrate && rake db:migrate:redo
 
 Usage
 -----

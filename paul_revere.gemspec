@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency("mongoid", "~> 2.4.11")
 
   s.add_development_dependency("bson_ext")
+  s.add_development_dependency("multi_json")
   s.add_development_dependency("mongoid-rspec", "<= 1.4.5")
   s.add_development_dependency("rspec-rails")
   s.add_development_dependency("mocha")

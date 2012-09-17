@@ -127,5 +127,6 @@ DEPENDENCIES
   database_cleaner
   mocha
   mongoid-rspec (<= 1.4.5)
+  multi_json
   paul_revere_mongoid!
   rspec-rails

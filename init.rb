@@ -1,1 +1,1 @@
-require 'paul_revere'
+require 'paul_revere_mongoid'

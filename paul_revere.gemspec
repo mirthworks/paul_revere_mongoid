@@ -1,5 +1,5 @@
 $:.push File.expand_path("../lib", __FILE__)
-require "paul_revere/version"
+require "paul_revere_mongoid/version"
 
 Gem::Specification.new do |s|
   s.name        = "paul_revere_mongoid"

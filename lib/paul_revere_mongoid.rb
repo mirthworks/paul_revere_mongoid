@@ -1,4 +1,4 @@
-require 'paul_revere/version'
+require 'paul_revere_mongoid/version'
 
 module PaulRevere
   class Engine < Rails::Engine

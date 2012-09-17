@@ -13,10 +13,6 @@ Install as normal in your Gemfile:
 
     gem 'paul_revere_mongoid', git: "https://github.com/mirthworks/paul_revere_mongoid"
 
-Run the generator to create the migration:
-
-    rails generate paul_revere
-
 Add the announcement JS to `app/assets/javascripts/application.js`:
 
     //= require announcements
@@ -29,7 +25,7 @@ Install as normal in your Gemfile:
 
     gem 'paul_revere_mongoid', git: "https://github.com/mirthworks/paul_revere_mongoid"
 
-Run the generator to create the migration and copy the JavaScript file into public:
+Run the generator to copy the JavaScript file into public:
 
     rails generate paul_revere
 

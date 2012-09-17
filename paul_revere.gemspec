@@ -17,10 +17,12 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency("rails", "~> 3.0")
+  s.add_dependency("mongoid", "~> 2.4.11")
 
-  s.add_development_dependency("rspec")
+  s.add_development_dependency("bson_ext")
+  s.add_development_dependency("mongoid-rspec", "<= 1.4.5")
   s.add_development_dependency("rspec-rails")
-  s.add_development_dependency("sqlite3")
   s.add_development_dependency("mocha")
   s.add_development_dependency("appraisal")
+  s.add_development_dependency("database_cleaner")
 end

@@ -4,7 +4,6 @@ require File.join(File.dirname(__FILE__), '..', '..', 'app', 'helpers', 'announc
 require File.join(File.dirname(__FILE__), '..', '..', 'app', 'models', 'announcement')
 
 describe AnnouncementsHelper do
-
   it "should return the current announcement when sent current_announcement and cache doesn't exist" do
     assign :current_announcement, nil
     Announcement.stubs(:current).returns(:foo)

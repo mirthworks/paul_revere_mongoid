@@ -1,0 +1,11 @@
+Description:
+    Copies a javascript file into the application, if asset pipeline is
+    not being used.
+
+Example:
+    rails generate paul_revere
+
+    This will create:
+        public/javascripts/announcements.js
+
+    if not using Asset pipeline.

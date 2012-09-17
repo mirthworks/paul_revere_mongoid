@@ -1,7 +1,12 @@
 # Configure Rails Envinronment
 ENV["RAILS_ENV"] = "test"
 
-require "rails/all"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
+require "mongoid"
+require "mongoid-rspec"
+require "database_cleaner"
 require "rspec/rails"
 
 # Pull in the fake rails app
@@ -14,13 +19,20 @@ RSpec.configure do |config|
   # Remove this line if you don't want RSpec's should and should_not
   # methods or matchers
   require 'rspec/expectations'
-  config.include RSpec::Matchers
+  config.include Mongoid::Matchers
+
+  Mongoid.load!(File.expand_path("../mongoid.yml", __FILE__))
 
   # == Mock Framework
   config.mock_with :mocha
 
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.orm = "mongoid"
+  end
+
   # Remove announcements before each example
   config.before(:each) do
-    Announcement.delete_all
+    DatabaseCleaner.clean
   end
 end

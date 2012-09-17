@@ -1,8 +1,11 @@
-class Announcement < ActiveRecord::Base
-  attr_accessible :body
+class Announcement
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :body
 
   def self.current
-    first(:order => 'created_at DESC') || new
+    first(sort: [[ :created_at, :desc ]]) || new
   end
 
   def exists?

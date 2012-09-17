@@ -1,6 +1,7 @@
 class PaulRevereGenerator < Rails::Generators::Base
 
   desc "Put the JavaScript in place"
+
   source_root File.join(File.dirname(__FILE__), "templates")
 
   def install
